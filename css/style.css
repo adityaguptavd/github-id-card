@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*, ::before, ::after{ margin: 0; padding: 0; box-sizing: border-box; }
+img{ vertical-align: bottom; }
+button{ cursor: pointer; padding: 0; }
+a{ text-decoration: none; color: inherit; }
+ul{ list-style: none; padding: 0; }
+:disabled{ cursor: not-allowed; }
+button:disabled{ background-color: #ece2e280; border-color: #ece2e280; }
+
+html{ --ff: "Barlow", serif; font: 400 normal 15px var(--ff); }
+body{ font: 400 normal 16px var(--ff); background-color: #282828; width: 100%; height: 100vh; }
+
+.img-resp{ max-width: 100%; height: auto; }
+.grid{ display: grid; place-items: center; }
+.flex{ display: flex; flex-flow: wrap; }
+.gap{ gap: 2rem; }
+
+.container{ max-width: 1230px; padding: 0 1rem; margin: auto; }
+.row{ display: flex; flex-flow: wrap; margin: 0 -1rem; padding: 0 1rem; }
+[class^="col-"]{ flex: 1 0 auto; padding: 0 1rem; }
+.col-1{ flex-basis: 8.33%; max-width: 8.33%; }
+.col-2{ flex-basis: 16.66%; max-width: 16.66%; }
+.col-3{ flex-basis: 25%; max-width: 25%; }
+.col-4{ flex-basis: 33.33%; max-width: 33.33%; }
+.col-6{ flex-basis: 50%; max-width: 50%; }
+.col-8{ flex-basis: 66.66%; max-width: 66.66%; }
+.col-12{ flex-basis: 100%; max-width: 100%; }
+
+header{ color: #fff; padding: 2rem 0; text-align: center; }
+h1{ font-size: 4rem; margin-bottom: 1rem; }
+header p{ font-size: 1.5em; }
+
+main{ color: #fff; margin-top: 1rem; }
+
+main form{ display: flex; gap: 2rem; justify-content: center; flex-flow: wrap; }
+
+form input{ min-width: 250px; padding: 1rem .5rem; border: #fff solid 2px; outline: none; background: none; border-radius: 4px; color: inherit; font-size: 1.5rem; font-style: italic; }
+
+form input::placeholder{ color: #ece2e2; }
+
+.btn{ background: none; border: 2px solid #fff; border-radius: 4px; font-size: 1.5rem; padding: 1rem; color: inherit; transition: 200ms; width: 120px; }
+.btn:not(:disabled):hover{ background: #fff; color: #f78d1e; }
+
+.flip{ display: grid; place-items: center; margin-top: 4rem; }
+
+main{ padding-bottom: 2rem; }
+main .card.rotate{ transform: rotateY(180deg); transition: transform 500ms linear; }
+main .card{ max-width: 700px; height: 400px; margin: 2rem auto; color: #282828; background: url(../img/card-front-bg.webp) no-repeat top right #e5e2d1; border-radius: 4px; position: relative; transform: rotateY(0deg); transition: transform 500ms linear; }
+
+main .card .active{ transition: visibility 0s 250ms linear, opacity 0s 250ms linear; visibility: visible; opacity: 1; }
+
+main .front, main .back{ transition: visibility 0s 250ms linear, opacity 0s 250ms linear; visibility: hidden; opacity: 0; position: absolute; inset: 0; }
+main .front .card-content{ position: relative; padding-top: 7rem; }
+main .designs{ position: absolute; left: 0; right: 0; top: 0; background: none; }
+main .designs .exclamation{ position: absolute; left: 4rem; top: 0; }
+main .designs .github-logo{ position: absolute; right: 1rem; top: 2rem; }
+main .front .main-content{ margin: 3rem 0; }
+main .front .avatar-container{ display: grid; place-items: center; }
+main .front .avatar{ max-width: min(100%, 250px); height: auto; border-radius: 50%; visibility: hidden; border: 5px solid #f78d1e; }
+
+main .front .info{ padding-top: 2rem; text-align: center; }
+main .info .name{ font-size: 3rem; }
+main .info .bio{ font-size: 2rem; }
+main .connections{ display: flex; justify-content: center; gap: 2rem; margin-top: 1rem; }
+main .front address{ margin-top: 1rem; }
+
+/* main .front .card-footer{ background-color: #d33b0ccc; height: 8rem; display: flex; align-items: center; justify-content: space-between; padding: 0 1rem; } */
+main .back{ transform: rotateY(180deg); }
+main .back .card-content{ height: 100%; color: #282828; }
+main .back .card-header{ height: 40%; display: flex; align-items: center; }
+main .back .main-content{ background-color: #d33b0ccc; height: 60%; padding: 2rem; display: flex; flex-flow: column; gap: 1rem; }
+main .back .username{ font-size: 2rem; margin-bottom: 0.5rem; }
+
+main .back .main-content > :not(:first-child) { margin-left: 2rem; }
+
+main .back span, main .back .bio{ color: #fff; font-style: italic; }
+
+main .blog, main .github{ display: none; width: 40px; height: 40px; }
+
+.account-id{ display: flex; justify-content: flex-end; gap: 10px; position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; }
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+
+    .col-t-4{ flex-basis: 33.33%; max-width: 33.33%; }
+    .col-t-12{ flex-basis: 100%; max-width: 100%; }
+    .col-t-hide{ display: none; }
+
+    main .card{ height: 620px; }
+    main .designs .github-logo{ max-width: 200px; height: auto; }
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A website where you can create your own ID card using your github username">
+    <title>Github Identity Card</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="prefetch" href="https://api.github.com"> -->
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>GitHub Identity Card</h1>
+            <p>~ Get your own GitHub Identity Card by username</p>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <form role="search">
+                <input type="text" placeholder="GitHub username..." aria-label="GitHub Username" name="username" required>
+                <button type="submit" class="btn">Create</button>
+            </form>
+            <div class="flip">
+                <button class="btn" disabled>Flip</button>
+            </div>
+            <div>
+            <div class="card">
+                <div class="front active">
+                    <div class="card-content">
+                        <div class="designs">
+                            <img src="./img/exclamation-mark.webp" alt="" class="exclamation">
+                            <img src="./img/github-logo-design.webp" alt="" class="github-logo">
+                        </div>
+                        <div class="main-content">
+                            <div class="row">
+                                <div class="col-4 col-t-12 avatar-container">
+                                    <div class="grid">
+                                        <img class="avatar" src="" alt="Avatar">
+                                    </div>
+                                </div>
+                                <div class="col-8 col-t-12">
+                                    <div class="info">
+                                        <h2 class="name"></h2>
+                                        <div class="connections">
+                                            <p class="followers"></p>
+                                            <p class="following"></p>
+                                        </div>
+                                        <address></address>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="account-id"></div>
+                </div>
+                <div class="back">
+                    <div class="card-content">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-2 col-t-hide"></div>
+                                <div class="col-2 col-t-4 grid">
+                                    <img class="img-resp" src="./img/wave.webp" alt="wave1">
+                                </div>
+                                <div class="col-1 col-t-hide"></div>
+                                <div class="col-2 col-t-4 grid">
+                                    <img class="img-resp" src="./img/github-logo.webp" alt="Github Logo">
+                                </div>
+                                <div class="col-1 col-t-hide"></div>
+                                <div class="col-2 col-t-4 grid">
+                                    <img class="img-resp" src="./img/wave.webp" alt="wave2">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="main-content">
+                            <b class="username"></b>
+                            <p class="bio"></p>
+                            <div class="flex gap">
+                                <time datetime="" class="created-at"></time>
+                                <time datetime="" class="updated-at"></time>
+                            </div>
+                            <ul class="flex gap">
+                                <li><a href="" class="blog" target="_blank"><img src="./img/web-icon.svg" alt="Blog"></a></li>
+                                <li><a href="" class="github" target="_blank"><img src="./img/github-icon.svg" alt="GitHub"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>
