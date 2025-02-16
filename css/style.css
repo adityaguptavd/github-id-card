@@ -88,6 +88,6 @@ main .blog, main .github{ display: none; width: 40px; height: 40px; }
     .col-t-12{ flex-basis: 100%; max-width: 100%; }
     .col-t-hide{ display: none; }
 
-    main .card{ height: 620px; }
+    main .card{ height: 700px; }
     main .designs .github-logo{ max-width: 200px; height: auto; }
 }
